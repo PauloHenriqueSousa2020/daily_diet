@@ -1,5 +1,5 @@
 // components
-import { Text } from "react-native";
+import { HomepageHeader } from "components";
 
 // styles
 import * as S from "./styles";
@@ -7,7 +7,7 @@ import * as S from "./styles";
 export function Home() {
   return (
     <S.Container>
-      <Text>Só temos a home por enquanto</Text>
+      <HomepageHeader variant="SECONDARY" />
     </S.Container>
   )
 }
