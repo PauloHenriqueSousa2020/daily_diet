@@ -1,10 +1,10 @@
 import { ArrowUpRight } from "phosphor-react-native";
 import styled from "styled-components/native";
 
-export type DietContentTypeStyleProps = 'PRIMARY' | 'SECONDARY'
+export type DietContentVariantStyleProps = 'PRIMARY' | 'SECONDARY'
 
 interface Props {
-  variant: DietContentTypeStyleProps
+  variant: DietContentVariantStyleProps
 }
 
 export const Container = styled.View`

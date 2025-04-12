@@ -2,7 +2,7 @@
 import * as S from "./styles";
 
 interface Props {
-  variant: S.DietContentTypeStyleProps;
+  variant: S.DietContentVariantStyleProps;
 }
 
 export function HomepageHeader({ variant }: Props) {
