@@ -8,14 +8,14 @@ interface Props {
   variant: S.DietContentVariantStyleProps;
 }
 
-export function HomepageHeader({ variant }: Props) {
+export function Header({ variant }: Props) {
   const navigation = useNavigation();
 
   return (
     <S.Container>
       <S.Header>
         <S.Logo
-          source={require('../../assets/logo.png')}
+          source={require('../../../../assets/logo.png')}
         />
 
         <S.UserPhoto

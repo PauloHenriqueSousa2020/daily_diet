@@ -3,7 +3,8 @@ import { useState } from "react";
 import { FlatList } from "react-native";
 
 // components
-import { HomepageHeader, Button, DayListMeal, EmptyList } from "components";
+import { Button, DayListMeal, EmptyList } from "components";
+import { Header } from "./components/Header";
 
 // assets
 import { Plus } from "phosphor-react-native";
@@ -30,7 +31,7 @@ export function Home() {
         data={meals}
         ListHeaderComponent={() => (
           <>
-            <HomepageHeader variant="PRIMARY" />
+            <Header variant="PRIMARY" />
 
             <S.Text>Refeições</S.Text>
             <Button text="Nova refeição" icon={<Plus />} variant="PRIMARY" />
