@@ -1,6 +1,6 @@
 // libs
 import { useNavigation } from "@react-navigation/native";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 
 // styles
 import * as S from "./styles";
@@ -8,6 +8,10 @@ import { Button, Input, Select } from "components";
 
 export function Register() {
   const navigation = useNavigation();
+
+  function handleNavigate() {
+    navigation.navigate('registerConfirm', { dietType: "OFF_DIET" });
+  }
 
   return (
     <S.Container>
@@ -57,8 +61,7 @@ export function Register() {
       <S.ButtonContent>
         <Button
           text="Cadastrar refeição"
-          title="registerMeal"
-          onPress={() => { }}
+          onPress={handleNavigate}
         />
       </S.ButtonContent>
     </S.Container>

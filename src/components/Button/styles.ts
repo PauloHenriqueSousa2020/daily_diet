@@ -22,7 +22,7 @@ export const Container = styled(TouchableHighlight).attrs<Props>(({ theme, varia
   background-color: ${({ theme, variant }) => variant === 'PRIMARY' ? theme.COLORS.GRAY_200 : theme.COLORS.WHITE};
   border: 1px solid ${({ theme, variant }) => variant === 'PRIMARY' ? 'transparent' : theme.COLORS.GRAY_100};
 
-  padding: 16px 24px;
+  padding: 12px 24px;
   border-radius: 6px;
 `
 

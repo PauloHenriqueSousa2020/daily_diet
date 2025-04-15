@@ -37,7 +37,12 @@ export function Home() {
             <Header variant="PRIMARY" />
 
             <S.Text>Refeições</S.Text>
-            <Button text="Nova refeição" icon={<Plus />} variant="PRIMARY" title="New Meal" onPress={() => navigation.navigate('register')} />
+            <Button
+              text="Nova refeição"
+              icon={<Plus />}
+              variant="PRIMARY"
+              onPress={() => navigation.navigate('register')}
+            />
           </>
         )}
         renderItem={({ item }) => <DayListMeal dayListMeal={item} />}

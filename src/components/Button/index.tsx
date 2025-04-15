@@ -1,12 +1,12 @@
 // libs
 import { cloneElement } from "react";
-import { ButtonProps } from "react-native";
+import { TouchableHighlightProps } from "react-native";
 import { useTheme } from "styled-components/native";
 
 // styles
 import * as S from "./styles";
 
-interface Props extends ButtonProps {
+interface Props extends TouchableHighlightProps {
   text: string;
   icon?: React.ReactElement;
   variant?: S.ButtonVariantStyleProps;
