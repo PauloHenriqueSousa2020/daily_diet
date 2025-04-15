@@ -1,6 +1,7 @@
 // libs
 import { useState } from "react";
 import { FlatList } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 // components
 import { Button, DayListMeal, EmptyList } from "components";
@@ -25,6 +26,8 @@ export function Home() {
     }[]
   }[]>(dayListMeals);
 
+  const navigation = useNavigation();
+
   return (
     <S.Container>
       <FlatList
@@ -34,7 +37,7 @@ export function Home() {
             <Header variant="PRIMARY" />
 
             <S.Text>Refeições</S.Text>
-            <Button text="Nova refeição" icon={<Plus />} variant="PRIMARY" />
+            <Button text="Nova refeição" icon={<Plus />} variant="PRIMARY" title="New Meal" onPress={() => navigation.navigate('register')} />
           </>
         )}
         renderItem={({ item }) => <DayListMeal dayListMeal={item} />}

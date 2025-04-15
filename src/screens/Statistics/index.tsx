@@ -10,7 +10,7 @@ export function Statistics() {
   return (
     <S.Container>
       <S.Header variant="PRIMARY">
-        <S.NavigateContainer onPress={() => navigation.navigate('statistics')}>
+        <S.NavigateContainer onPress={() => navigation.navigate('home')}>
           <S.NavigateIcon variant={'PRIMARY'} />
         </S.NavigateContainer>
 

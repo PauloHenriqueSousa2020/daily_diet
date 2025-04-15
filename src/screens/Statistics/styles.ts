@@ -1,6 +1,9 @@
-import { ArrowLeft } from "phosphor-react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+// libs
 import styled from "styled-components/native";
+import { SafeAreaView } from "react-native-safe-area-context";
+
+// assets
+import { ArrowLeft } from "phosphor-react-native";
 
 export type DietContentVariantStyleProps = 'PRIMARY' | 'SECONDARY'
 
@@ -8,11 +11,11 @@ interface Props {
   variant: DietContentVariantStyleProps
 }
 
-export const Container = styled.View``
+export const Container = styled.View`
+  position: relative;
+`
 
 export const Header = styled(SafeAreaView) <Props>`
-  position: relative;
-  
   align-items: center;
   justify-content: center;
   
@@ -36,23 +39,13 @@ export const Subtitle = styled.Text`
   font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
 `
 
-export const NavigateContainer = styled.TouchableOpacity`
-  position: absolute;
-  left: 24;
-  top: 64px;
-
-  width: 24px;
-  height: 24px;
-
-  align-items: center;
-  justify-content: center;
-`
-
 export const StatisticsContent = styled.View`
   height: 100%;
   padding: 24px 20px 0px;
 
   background-color: ${({ theme }) => theme.COLORS.GRAY_700};
+
+  border-radius: 20px;
 `
 
 export const StatisticsContentText = styled.Text`
@@ -99,9 +92,21 @@ export const StatisticsContentBlockVariant = styled(StatisticsContentBlock) <Pro
   background-color: ${({ theme, variant }) => variant === 'PRIMARY' ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
 `
 
+export const NavigateContainer = styled.TouchableOpacity`
+  position: absolute;
+  left: 24px;
+  top: 64px;
+
+  width: 24px;
+  height: 24px;
+
+  align-items: center;
+  justify-content: center;
+`
+
+
 export const NavigateIcon = styled(ArrowLeft).attrs<Props>(({ theme, variant }) => ({
   size: 18,
   color: variant === 'PRIMARY' ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK,
   weight: 'bold'
 }))``;
-

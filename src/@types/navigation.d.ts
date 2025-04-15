@@ -3,6 +3,10 @@ export declare global {
     interface RootParamList {
       home: undefined;
       statistics: undefined;
+      register: undefined;
+      registerConfirm: {
+        dietType: string;
+      }
     }
   }
 }

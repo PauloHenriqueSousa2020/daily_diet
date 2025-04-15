@@ -15,7 +15,7 @@ export const Container = styled.View`
   min-height: 172px;
   max-height: 172px;
 
-  margin-bottom: 40px;
+margin-bottom: 40px;
 `
 
 export const Header = styled.View`
