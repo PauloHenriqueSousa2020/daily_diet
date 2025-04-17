@@ -5,7 +5,7 @@ export declare global {
       statistics: undefined;
       register: undefined;
       registerConfirm: {
-        dietType: string;
+        dietType: MealStatus;
       }
     }
   }

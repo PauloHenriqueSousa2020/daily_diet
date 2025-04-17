@@ -5,11 +5,13 @@ import { useNavigation } from "@react-navigation/native";
 import * as S from "./styles";
 
 interface Props {
-  variant: S.DietContentVariantStyleProps;
+  onDietPercentage: number;
 }
 
-export function Header({ variant }: Props) {
+export function Header({ onDietPercentage }: Props) {
   const navigation = useNavigation();
+
+  const variant = onDietPercentage >= 50 ? 'PRIMARY' : 'SECONDARY';
 
   return (
     <S.Container>
@@ -24,7 +26,7 @@ export function Header({ variant }: Props) {
       </S.Header>
 
       <S.DietContent variant={variant}>
-        <S.DietPercentage>90,86%</S.DietPercentage>
+        <S.DietPercentage>{onDietPercentage}%</S.DietPercentage>
         <S.DietAuxiliarText>das refeições dentro da dieta</S.DietAuxiliarText>
 
         <S.NavigateContainer onPress={() => navigation.navigate('statistics')}>

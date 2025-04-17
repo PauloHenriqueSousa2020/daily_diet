@@ -18,5 +18,5 @@ export const Input = styled.TextInput.attrs(props => ({
   border-radius: 6px;
   color: ${({ theme }) => theme.COLORS.GRAY_100};
   padding: 12px 16px;
-  
+  height: ${({ multiline }) => multiline ? '120px' : '52px'};
 `;
